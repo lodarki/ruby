@@ -71,16 +71,7 @@ class Poker
   end
 
   def shuffle
-    index = self.amountOfTotal - 1
-    while index > 1 do
-      exchangeFrom = rand(index);
-      index -= 1
-      exchangeTo = rand(index);
-      index -= 1
-       deliver = @pokerArray[exchangeFrom]
-       @pokerArray[exchangeFrom] = @pokerArray[exchangeTo]
-       @pokerArray[exchangeTo] = deliver
-    end
+    @pokerArray.shuffle!
     @shuffled = true
     puts 'this is after shuffle'
     p @pokerArray
