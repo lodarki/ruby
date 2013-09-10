@@ -3,10 +3,11 @@ class Poker
 
   attr_accessor :pokerArray
 
+    SUIT = ['$','%','^','&']
+    NUMBERS = (1..10).to_a << 'J' << 'Q' << 'K'
+
   def initialize
     index = 0
-    @suits = ['$','%','^','&']
-    @numbers = ['1','2','3','4','5','6','7','8','9','10','J','Q','K']
     @shuffled = false
     @pokerArray = Array.new(52)
     @amountOfSpade = 0
@@ -14,8 +15,8 @@ class Poker
     @amountOfDiamond = 0
     @amountOfClub = 0
 
-    for suit in @suits do
-      for number in @numbers do
+    for suit in SUIT do
+      for number in NUMBERS do
         @pokerArray[index] = suit + number
         index += 1
       end
