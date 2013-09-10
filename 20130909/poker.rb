@@ -1,4 +1,4 @@
-
+# encoding: UTF-8
 class Poker
 
   attr_accessor :pokerArray
